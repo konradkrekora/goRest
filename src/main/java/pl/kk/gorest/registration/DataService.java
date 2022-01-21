@@ -5,11 +5,15 @@ import org.springframework.stereotype.Service;
 import pl.kk.gorest.user.User;
 import pl.kk.gorest.user.UserRepository;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class DataService {
 
     private final UserRepository repo;
+
 
     public User register(Data request) {
         User user = new User(request.name, request.email, request.gender, request.status);

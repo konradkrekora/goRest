@@ -12,10 +12,8 @@ public class UserService {
 
     private final UserRepository userRepository;
 
-    public String showUsers(Model model) {
-        List<User> usersList = userRepository.findAll();
-        model.addAttribute("usersList", usersList);
-        return "users";
+    public List<User> showUsers() {
+        return userRepository.findAll();
     }
 
 }
