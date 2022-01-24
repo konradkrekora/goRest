@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+<div class="container text-center">
+    <div>
+        <h1 class="text-primary">Registration</h1>
+    </div>
+    <form th:action="@{/user_success}" method="post"
+          style="max-width: 500px; margin: 0 auto "
+          th:object="${user}"
+    >
+        <div class="m-4">
+            <div class="form-group row m-2">
+                <label class="form-label col-4">ID</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" th:field="*{id}" required/>
+                </div>
+            </div>
+
+            <div class="float-end m-4">
+                <button type="submit" class="btn btn-primary">add user</button>
+            </div>
+
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>

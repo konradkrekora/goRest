@@ -11,6 +11,6 @@ import java.util.List;
 @Builder
 public class ResponseGoRestList {
     private Object meta;
-    private List<Data> dataList;
+    private List<Data> data;
 
 }
